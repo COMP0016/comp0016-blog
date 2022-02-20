@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Team 38">
+    <title>System Design | WAPETS 2.0</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <style>
+      html,
+      body {
+        overflow-x: hidden; /* Prevent scroll on narrow devices */
+      }
+
+      @media (max-width: 991.98px) {
+        .offcanvas-collapse {
+          position: fixed;
+          top: 56px; /* Height of navbar */
+          bottom: 0;
+          left: 100%;
+          width: 100%;
+          padding-right: 1rem;
+          padding-left: 1rem;
+          overflow-y: auto;
+          visibility: hidden;
+          background-color: #343a40;
+          transition: transform .3s ease-in-out, visibility .3s ease-in-out;
+        }
+        .offcanvas-collapse.open {
+          visibility: visible;
+          transform: translateX(-100%);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark" aria-label="Main navigation">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/2021/group38" aria-current="page">WAPETS 2.0</a>
+        <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="navbar-collapse offcanvas-collapse">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="01-requirements.html">Requirements</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="02-hci.html">HCI</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="03-research.html">Research</a>
+            </li>
+           <li class="nav-item">
+             <a class="nav-link active" href="04-system-design.html">System design</a>
+           </li>
+           <li class="nav-item">
+             <a class="nav-link active" href="05-implementation">Implementation</a>
+           </li>
+           <li class="nav-item">
+             <a class="nav-link active" href="06-testing">Testing</a>
+           </li>
+           <li class="nav-item">
+             <a class="nav-link active" href="07-evaluation">Evaluation</a>
+           </li>
+           <li class="nav-item">
+             <a class="nav-link active" href="08-appendix.html">Appendix</a>
+           </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container pt-5">
+      <div class="row">
+        <div class="col-md-8 offset-md-2">
+
+          <h2 class="mt-3">Architecture</h2>
+          <div class="card mb-3">
+            <div class="card-body">
+              <h3 class="card-title">Desktop Assistant</h3>
+              <hr />
+              <p class="card-text">
+                For Desktop Assistant part, on the top there is a tools bar which has functions like document, settings, set up alarms, search, see local news based on persona, bus lines, map, enter AR mode, play music, turn on/off other functions. There is also search bar, music player, message notifier – which gives notification messages like alarm, interesting news in the form of a speech bubble. And, of course, the pet – there is a pet house, when we click on the house, the pet walks out with some animations (Figure 1). All bars can be hided, except for pet.
+              </p>
+              <div class="row">
+                <div class="col-xl-8 offset-xl-2">
+                  <img class="img img-fluid mb-3" src="./assets/img/design/Desktop.png">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card mt-3 mb-3">
+            <div class="card-body">
+              <h3 class="card-title">AR Mode</h3>
+              <hr />
+              <p class="card-text">
+                When we enter AR mode, we can feed, play with the pet, but the other function remains, like search, alarm, local news, music player, etc. Functions like TTS, ASR and music player are still available under AR mode (Figure 2). Server synchronizes position. Under all modes, server stores user profile, pet info. 
+              </p>
+              <div class="row">
+                <div class="col-xl-8 offset-xl-2">
+                  <img class="img img-fluid mb-3" src="./assets/img/design/AR.png">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <hr />
+
+          <h2>AI Design</h2>
+          <div class="card mt-3 mb-3">
+            <div class="card-body">
+              <h3 class="card-title">Pet AI</h3>
+              <hr />
+              <p class="card-text">
+                We choose State Machine AI to develop pet AI. Why? Currently most pet in games are similar like this, and it’s enough because this project is more of an AI assistant in the form of a pet, rather than a pet as complex as learning the user’s previous pet behavior. Also, we don’t want a pet that is 100% real, e.g., if you forget to feed them in a long time it will die.
+              </p>
+
+              <p class="card-text">
+                Typical states include Idle --- licking, sleeping, stretching; Moving --- walking, running, jumping around; Reacting to human gesture --- sit, stand, rolling, enjoying petting; Playing; Eating (Figure 3). Pet will automatically turn to user, and chase if distance is larger than 1 meter. Might asking for notice if hungry.
+              </p>
+
+              <div class="row">
+                <div class="col-xl-8 offset-xl-2">
+                  <img class="img img-fluid mb-3" src="./assets/img/design/PetAI.jpg">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card mt-3 mb-3">
+            <div class="card-body">
+              <h3 class="card-title">Others</h3>
+              <hr />
+              <p class="card-text">
+                For other AI like speech recognition, we can say for example “Set an alarm clock at seven to remind me to get up”, so the new alarm pops up on top right. For text-to-speech, we can let it say, “jobs done”, or when we ask it to show bus timetable, it responds with something like “The next bus No. 82 will arrive in 10 minutes”
+              </p>
+              </div>
+            </div>
+            <hr />   
+
+            <h2 class="mt-3">APIs</h2>
+            <div class="card mt-3 mb-3">
+              <div class="card-body">
+                <h5 class="card-text">WAPET.login(password, account)</h6>
+                <hr />
+                <p class="card-text">
+                    Send the login account and its corresponding password to server, verifies it and if matches, the user can login their account. 
+                </p>
+
+                <h5 class="card-text">WAPET.GetStatus() </h6>
+                <hr />
+                <p class="card-text">
+                    Send the login account and its corresponding password to server, verifies it and if matches, the user can login their account. 
+                </p>
+                
+                <h5 class="card-text">WAPET.GetStatus() (Overwrites) </h6>
+                    <hr />
+                    <p class="card-text">
+                        Get the status of the pet from server every certain time period, including its name, age, and other info, and its current state (under AR mode), position relative to the detected plane. Client on different platform can operate different actions once receive status, e.g. synchronizing actions with entity Interpolation.  
+                    </p>
+
+                <h5 class="card-text">WAPET.ChangeState(stateName) </h6>
+                <hr />
+                <p class="card-text">
+                    Send the current state message to server once one device enters AR mode, so that server can send status message to each client. Typical states include Idle, Reacting to Human, Walking around, Eating, Sleeping. Check Pet AI part for more. 
+                </p>
+
+                <h5 class="card-text">WAPET.TextToSpeech(text)  </h6>
+                    <hr />
+                    <p class="card-text">
+                        Send a text message to server and get an audio clip back. 
+                    </p>
+
+                <h5 class="card-text">WAPET.SpeechToText(audio)  </h6>
+                <hr />
+                <p class="card-text">
+                    Send an audio to server and get text back. 
+                </p>
+
+                <h5 class="card-text">WAPET.GetBusTimeable()  </h6>
+                    <hr />
+                    <p class="card-text">
+                        Get local bus timetable, play the audio 
+                    </p>
+
+                <h5 class="card-text">WAPET.GetLocalNews()  </h6>
+                <hr />
+                <p class="card-text">
+                    Get Recommended local news, personal interests are stored in database. 
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <p class="col-md-4 mb-0 text-muted">&copy; <script>document.write(new Date().getFullYear())</script> Team 38</p>
+
+<!--        <a href="/2021/group38" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">-->
+<!--          <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>-->
+<!--        </a>-->
+
+        <ul class="nav col-md-4 justify-content-end">
+          <li class="nav-item"><a href="/2021/group38" class="nav-link px-2 text-muted">Home</a></li>
+          <li class="nav-item"><a href="/2021/group38/01-requirements.html" class="nav-link px-2 text-muted">Requirements</a></li>
+          <li class="nav-item"><a href="/2021/group38/02-hci.html" class="nav-link px-2 text-muted">HCI</a></li>
+        </ul>
+      </footer>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <script>
+      (function () {
+        'use strict'
+
+        document.querySelector('#navbarSideCollapse').addEventListener('click', function () {
+          document.querySelector('.offcanvas-collapse').classList.toggle('open')
+        })
+      })()
+    </script>
+  </body>
+</html>
