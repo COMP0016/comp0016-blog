@@ -99,66 +99,61 @@
     <main class="container pt-5">
       <div class="row">
         <div class="col-md-8 offset-md-2">
-          <h2 class="mt-3">Testing Strategy</h2>
+          <h2 class="mt-3">Overview</h2>
           <div class="card mb-3">
             <div class="card-body">
               <p class="card-text">
-                WAPETS v2 is run on local machines while interacting with a web
-                server to store and retrieve user information, thus it is very
-                important that all aspects of the application are thoroughly
-                tested to ensure that it runs without hiccoughs. Before
-                deploying the project, we must make sure that the
-                functionalities provided work as intended and that both the web
-                server and application itself work seamlessly in the way we
-                intended them to. For this reason, we’ve set up a comprehensive
-                testing plan provided below.
+                Since our main task is to implement an AR Pet Assistant, it is
+                natural to think of Unity. Unity platform allows making
+                real-time 3D projects for Games, Engineering, Film, etc. [1],
+                and it is also one of the best tools for XR development [2]. C#,
+                backed by Microsoft [3], is the language supported by Unity for
+                developers.
               </p>
               <p class="card-text">
-                Since most of our project consists of creating a GUI for users
-                to interact with, we had to make sure we included user
-                acceptance testing as part of our testing strategy, seeing as
-                how testing individual UI components is not possible. For the
-                code used for the web server, we implemented integration testing
-                as the API used was very thin, meaning that a unit test would be
-                essentially the same thing as an integration test. The benefit
-                of implementing integration testing was that the URLs of the API
-                were tested as well as the underlying API functionality.
+                Our project can be divided into 5 main parts:
+                <span style="color: blue"
+                  >AR (Unity Engine), HCI, AI, Animation, Server</span
+                >. I’ll introduce them one by one.
               </p>
             </div>
           </div>
           <hr />
 
-          <h2 class="mt-3">Integration Testing</h2>
+          <h2 class="mt-3">AR</h2>
           <div class="card mt-3 mb-3">
             <div class="card-body">
               <p class="card-text">
-                For testing the web server by integration testing, we used
-                Python’s unittest library (which can also be used for
-                integration tests). We made use of Django’s helper
-                functionalities on top the unittest library, combining the
-                djangorestframework (DRF) to build on top of this further.
+                There are four major AR SDKs today: ARKit, ARCore, Vuforia and
+                AR Foundation. All SDKs are integrated in Unity game engine [4].
               </p>
               <p class="card-text">
-                Django provides a “test client” which can be used to simulate
-                requests to a URL, as though a user was making the request
-                through a web browser
+                AR Foundation: A framework purpose-built for AR development
+                allows you to develop your app once, then deploy it across
+                multiple mobile and wearable AR devices. It includes core
+                features from each platform, as well as unique Unity features
+                that include photorealistic rendering, physics, device
+                optimizations, and more. AR Foundation is a good AR development
+                tool for games and lightweight solutions.
               </p>
               <p class="card-text">
-                The DRF extends this with a couple of helpful tweaks, such as
-                the ability to easily specify the format of data being sent
-                (json/multipart/etc.) and the ability to automatically send
-                multipart data with PUT and PATCH, as opposed to just POST
-                <img
-                  class="img img-fluid mb-3"
-                  src="./assets/img/research/WebServerTest.png"
-                />
+                Vuforia: As a leader in the AR/MR space, PTC’s Vuforia is a
+                great development system for business-oriented projects,
+                especially manufacturing AR solutions. The program’s flexible
+                development engine has already been used for creating innovative
+                workflows in multiple industries. Vuforia collaborates with
+                Unity to help developers use augmented reality as a
+                cross-platform SDK for Android, iOS, UWP and digital eyewear. It
+                can use images and real objects as targets for placing content
+                and tracking in the real world.
               </p>
               <p class="card-text">
-                For each different piece of functionality of the pet API, the
-                test sets up some data for the scenario and makes a request
-                using the test client. It then checks that the returned response
-                from the server is correct, and that the resulting DB state is
-                correct.
+                AR Kit and AR Core: ARKit is the go-to application for the
+                development of AR software developed by Apple, so it is not
+                possible to use ARKit on android phones. ARCore is in many ways
+                an analog of ARKit – another application developed by the
+                creators of a platform for devices using this platform. In this
+                case, the company is Google, and the platform is Android.
               </p>
               <p class="card-text">
                 SLAM AR: SLAM stands for Simultaneous Localization and Mapping.
