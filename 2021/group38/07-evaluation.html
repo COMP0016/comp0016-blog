@@ -434,66 +434,48 @@
       </div>
           <hr />
 
-          <h2 class="mt-3">AR</h2>
+          <h2 class="mt-3">Known Bugs</h2>
           <div class="card mt-3 mb-3">
             <div class="card-body">
               <p class="card-text">
-                The main AI technology used is Automated Speech Recognition,
-                text to speech and recommendation systems.
+                1. Speech recognition may sometimes be inaccurate due to Watson’s voice detection logic 
               </p>
               <p class="card-text">
-                IBM Watson: Watson is IBM’s suite of enterprise-ready Artificial
-                Intelligence (AI) services, applications, and tooling [6].
-                Automated Speech Recognition and Text to Speech (TTS) are
-                integrated within IBM Watson.
+                2. Dragging the desktop pet to the edges of the screen can sometimes obscure the visibility of the speech bubble that pops up when the pet responds
               </p>
               <p class="card-text">
-                Automated Speech Recognition (ASR): IBM Watson® Speech to Text
-                technology enables fast and accurate speech transcription in
-                multiple languages for a variety of use cases. The service
-                leverages machine learning to combine knowledge of grammar,
-                language structure, and the composition of audio and voice
-                signals to accurately transcribe the human voice.
-              </p>
-              <p class="card-text">
-                Text to speech (TTS): IBM Watson® Text to Speech is an API cloud
-                service that enables user to convert written text into
-                natural-sounding audio in a variety of languages and voices
-                within an existing application or within Watson Assistant. The
-                audio uses appropriate cadence and intonation for its language
-                and dialect to provide voices that are smooth and natural.
-              </p>
-              <p class="card-text">
-                Recommender system: A recommender system, or a recommendation
-                system (sometimes replacing 'system' with a synonym such as
-                platform or engine), is a subclass of information filtering
-                system that seeks to predict the "rating" or "preference" a user
-                would give to an item [7]. One approach to the design of
-                recommender systems that has wide use is collaborative
-                filtering. Collaborative filtering is based on the assumption
-                that people who agreed in the past will agree in the future, and
-                that they will like similar kinds of items as they liked in the
-                past. The system generates recommendations using only
-                information about rating profiles for different users or items.
-                By locating peer users/items with a rating history similar to
-                the current user or item, they generate recommendations using
-                this neighborhood.
+                3. When interacting with the desktop GUI, the input fields send an empty query if the user clicks on the input field, does not enter anything, then clicks away 
               </p>
             </div>
           </div>
           <hr />
 
-          <h2 class="mt-3">Animations</h2>
+          <h2 class="mt-3">Critical Evaluations </h2>
           <div class="card mt-3 mb-3">
             <div class="card-body">
+                <h3 class="mt-3">Functionality</h3>
               <p class="card-text">
-                Characters, animals, plants, and other moving objects in the
-                game need to be designed by game animators to achieve realistic
-                effects. Generally, 3ds Max, After Effects, and Photoshop are
-                used to do bone skin binding production. However, due to
-                shortness of time and people, we may not have the time to learn
-                and do these from scratch. Website like Mixamo, Free3d provides
-                free 3d models and animations, which could be of great help.
+                Our group has always focused on our project’s main ambition: developing interactable pets for both mobile and desktop. With that main goal in mind, we have also added multiple API files to support things such as retrieving news, retrieving TFL times and displaying a real-time clock.  
+
+ 
+
+In addition to our main goal, we have also added our client’s requests such as making the pets respond to user speech commands (sort of like a chatbot), having the pets respond to user questions and have added support for users to add their own commands through an Excel csv file. This way, users can add their own commands that the pet will respond to and execute. 
+              </p>
+            </div>
+            <div class="card-body">
+                <h3 class="mt-3">Stability / Efficiency </h3>
+              <p class="card-text">
+                Our project is quite stable: the pet responds in a predictable manner and its responses can be reproduced even when the app is closed and restarted. The same applies for the login and APIs – the requests to the web server and other websites are reproducible and stable but depend largely on the latency of the user’s internet.  
+
+ 
+
+One problem with efficiency that does arise from time to time is that the pet takes some time to respond to the user’s voice commands – this is caused by the pet’s response interacting with IBM’s Watson framework. Due to this delay, it may seem as if the pet is not responding at times when it is in fact processing the user’s commands.  
+              </p>
+            </div>
+            <div class="card-body">
+                <h3 class="mt-3">Compatibility </h3>
+              <p class="card-text">
+                Our application is currently compatible with Windows on Desktop and Android on Mobile. The app is currently not available on MacOS and Linux as it interacts with the Windows API to display the application on top of already running applications to create the transparent app window effect. This is only possible with Windows API and is thus fit for running on Windows only. The users can download the executable file to run the application on their local machines. 
               </p>
             </div>
           </div>
