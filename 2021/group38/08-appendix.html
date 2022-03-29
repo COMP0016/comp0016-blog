@@ -78,7 +78,9 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="05-implementation.html">Implementation</a>
+              <a class="nav-link active" href="05-implementation.html"
+                >Implementation</a
+              >
             </li>
             <li class="nav-item">
               <a class="nav-link active" href="06-testing.html">Testing</a>
@@ -99,7 +101,7 @@
     <main class="container pt-5">
       <div class="row">
         <div class="col-md-8 offset-md-2">
-          <h2 class="mt-3">Overview</h2>
+          <h2 class="mt-3">User Manual</h2>
           <div class="card mb-3">
             <div class="card-body">
               <p class="card-text">
@@ -120,301 +122,116 @@
           </div>
           <hr />
 
-          <h2 class="mt-3">AR</h2>
+          <h2 class="mt-3">Deployment Manual</h2>
           <div class="card mt-3 mb-3">
             <div class="card-body">
-              <p class="card-text">
-                There are four major AR SDKs today: ARKit, ARCore, Vuforia and
-                AR Foundation. All SDKs are integrated in Unity game engine [4].
-              </p>
-              <p class="card-text">
-                AR Foundation: A framework purpose-built for AR development
-                allows you to develop your app once, then deploy it across
-                multiple mobile and wearable AR devices. It includes core
-                features from each platform, as well as unique Unity features
-                that include photorealistic rendering, physics, device
-                optimizations, and more. AR Foundation is a good AR development
-                tool for games and lightweight solutions.
-              </p>
-              <p class="card-text">
-                Vuforia: As a leader in the AR/MR space, PTC’s Vuforia is a
-                great development system for business-oriented projects,
-                especially manufacturing AR solutions. The program’s flexible
-                development engine has already been used for creating innovative
-                workflows in multiple industries. Vuforia collaborates with
-                Unity to help developers use augmented reality as a
-                cross-platform SDK for Android, iOS, UWP and digital eyewear. It
-                can use images and real objects as targets for placing content
-                and tracking in the real world.
-              </p>
-              <p class="card-text">
-                AR Kit and AR Core: ARKit is the go-to application for the
-                development of AR software developed by Apple, so it is not
-                possible to use ARKit on android phones. ARCore is in many ways
-                an analog of ARKit – another application developed by the
-                creators of a platform for devices using this platform. In this
-                case, the company is Google, and the platform is Android.
-              </p>
-              <p class="card-text">
-                SLAM AR: SLAM stands for Simultaneous Localization and Mapping.
-                It is a technology which understands the physical world through
-                feature points. This makes it possible for AR applications to
-                Recognize 3D Objects & Scenes, as well as to Instantly Track the
-                world, and to overlay digital interactive augmentations. We need
-                to apply this technology so that pets can understand and move in
-                user’s room.
-              </p>
+              <p class="card-text">The app can be deployed as follows.</p>
             </div>
           </div>
           <hr />
 
-          <h2 class="mt-3">HCI</h2>
+          <h2 class="mt-3">Legal Issues & Processes</h2>
           <div class="card mt-3 mb-3">
             <div class="card-body">
+              <h3 class="mt-3">IP Statement</h3>
               <p class="card-text">
-                As for interaction, we use UCL’s Motion Input V2. Recent
-                advancements in gesture recognition technology, computer vision
-                and machine learning open up a world of new opportunities for
-                touchless computing interactions. UCL’s MotionInput supporting
-                DirectX v2.0 is the second iteration of our Windows based
-                library. This uses several open-source and federated on-device
-                machine learning models, meaning that it is privacy safe in
-                recognising users. It captures and analyses interactions and
-                converts them into mouse and keyboard signals for the operating
-                system to make use of in its native user interface [5].
+                The intellectual property rights (including patent, copyright,
+                database, registered or unregistered design rights or trade
+                marks) of this project fall under the UCL Studentship IP and is
+                owned by UCL and, to the extent that any of the Studentship IP
+                is not automatically owned by UCL, the developers and users
+                assign their rights in the Studentship IP to UCL, with full
+                title guarantee and free of encumbrances as a present assignment
+                of existing and future rights. The developers and users also
+                agree to execute such documents and provide such assistance as
+                UCL may reasonably request at a later date for these purposes.
+              </p>
+              <p class="card-text">
+                Our project is owned and will be operated by UCL and IBM, and
+                thus any source code distribution of the project can only be
+                distributed in accordance with UCL and IBM, and hence is not
+                available for use as open-source software unless specified
+                explicitly by UCL and/or IBM.
+              </p>
+              <h3 class="mt-3">GDPR Statement and Data Usage</h3>
+              <p class="card-text">
+                Our project makes use of a login system that stores and
+                processes user email addresses, which may include usernames
+                and/or surnames and/or other user information, and user
+                passwords. Our application will not keep or expose any data
+                (usernames, emails, passwords, user searches and user
+                preferences) that have been sent, stored and/or uploaded by
+                users after the users finish using it. The application is
+                expected to be accessed and used by any legal citizens, without
+                discrimination towards any of the users that may want to use it
+                based on gender, race, religion etc.
+              </p>
+              <p class="card-text">
+                We’ve taken the necessary steps to ensure privacy and data
+                protection in our project. We’ve set our GitHub repository to
+                private to disallow any confidential information, whether it be
+                user information, token information or source code to be leaked.
+                This also ensures that the data is not shared to anyone that is
+                not directly involved in the development of our project.
+              </p>
+              <p class="card-text">
+                To ensure user’s data safety, we can ensure users that we use
+                appropriate methods to process the data that may be sent by
+                users. No data is sent or sold to any other company,
+                organisation (profit or non-profit) other than those covered
+                under the IP statement. The web server used to store user
+                information uses Python’s Django framework to send and receive
+                information from and to the web server, ensuring that our data
+                is processed as it is intended to.
+              </p>
+              <p class="card-text">
+                Our project uses speech processing through IBM’s Watson
+                toolchain to process certain user commands. None of the user
+                voice commands are stored, sent or processed in any way. We can
+                ensure users that their biometric information is not stored in
+                any way and is used in accordance with the GDPR to only process
+                commands that the user instructs the application to perform.
+              </p>
+              <p class="card-text">
+                Finally, we ensure that our program only processes data that is
+                necessary for the minimum functionality of our project, namely
+                the login screen. Other user data such as keystrokes, search
+                inputs, mouse clicks and any other type of user input and/or
+                user-specific information is not processed in any way by our
+                application. End users can be ensured that their data will only
+                be processed in the abovementioned methods, and any changes that
+                may occur will be informed to them and will be asked for their
+                confirmation.
+              </p>
+              <h3 class="mt-3">Licences and Intellectual Property</h3>
+              <p class="card-text">
+                For the dependencies used for the project, which are:
+              </p>
+              <p class="card-text">
+                asgiref - BSD License, Django - BSD License, gunicorn - MIT
+                License, psycopg2 - GPL License, pytz - MIT License, sqlparse -
+                BSD License, whitenoise - MIT License, dj-database-url - BSD
+                License, djangorestframework - BSD License, drf-jwt - MIT
+                License, pyyaml - MIT License, uritemplate - BSD License,
+                drf-yasg - BSD License, Poco – Apache License 2.0
+              </p>
+              <p class="card-text">
+                and etc., all of them allows for commercial use, modification
+                with changes stated and private use.
+              </p>
+              <p class="card-text">
+                For the application development, we used Unity Technologies’
+                Unity for the application and IBM’s Watson for additional
+                functions and libraries.
+              </p>
+              <p class="card-text">
+                No copyrighted resources such as images are used other than
+                those stated above and/or referenced in any part of our website
+                on the project.
               </p>
             </div>
           </div>
           <hr />
-
-          <h2 class="mt-3">AR</h2>
-          <div class="card mt-3 mb-3">
-            <div class="card-body">
-              <p class="card-text">
-                The main AI technology used is Automated Speech Recognition,
-                text to speech and recommendation systems.
-              </p>
-              <p class="card-text">
-                IBM Watson: Watson is IBM’s suite of enterprise-ready Artificial
-                Intelligence (AI) services, applications, and tooling [6].
-                Automated Speech Recognition and Text to Speech (TTS) are
-                integrated within IBM Watson.
-              </p>
-              <p class="card-text">
-                Automated Speech Recognition (ASR): IBM Watson® Speech to Text
-                technology enables fast and accurate speech transcription in
-                multiple languages for a variety of use cases. The service
-                leverages machine learning to combine knowledge of grammar,
-                language structure, and the composition of audio and voice
-                signals to accurately transcribe the human voice.
-              </p>
-              <p class="card-text">
-                Text to speech (TTS): IBM Watson® Text to Speech is an API cloud
-                service that enables user to convert written text into
-                natural-sounding audio in a variety of languages and voices
-                within an existing application or within Watson Assistant. The
-                audio uses appropriate cadence and intonation for its language
-                and dialect to provide voices that are smooth and natural.
-              </p>
-              <p class="card-text">
-                Recommender system: A recommender system, or a recommendation
-                system (sometimes replacing 'system' with a synonym such as
-                platform or engine), is a subclass of information filtering
-                system that seeks to predict the "rating" or "preference" a user
-                would give to an item [7]. One approach to the design of
-                recommender systems that has wide use is collaborative
-                filtering. Collaborative filtering is based on the assumption
-                that people who agreed in the past will agree in the future, and
-                that they will like similar kinds of items as they liked in the
-                past. The system generates recommendations using only
-                information about rating profiles for different users or items.
-                By locating peer users/items with a rating history similar to
-                the current user or item, they generate recommendations using
-                this neighborhood.
-              </p>
-            </div>
-          </div>
-          <hr />
-
-          <h2 class="mt-3">Animations</h2>
-          <div class="card mt-3 mb-3">
-            <div class="card-body">
-              <p class="card-text">
-                Characters, animals, plants, and other moving objects in the
-                game need to be designed by game animators to achieve realistic
-                effects. Generally, 3ds Max, After Effects, and Photoshop are
-                used to do bone skin binding production. However, due to
-                shortness of time and people, we may not have the time to learn
-                and do these from scratch. Website like Mixamo, Free3d provides
-                free 3d models and animations, which could be of great help.
-              </p>
-            </div>
-          </div>
-          <hr />
-
-          <h2 class="mt-3">Server</h2>
-          <div class="card mt-3 mb-3">
-            <div class="card-body">
-              <p class="card-text">
-                Since our project is multi-platform, we’ll need a server to
-                ensure devices of the same account see identical behavior of a
-                pet, so that scenes like a cat jump from one screen to another
-                is achievable. Pets’ data should also be shared among devices
-                with no differences.
-              </p>
-              <p class="card-text">
-                Game server: Our server needs to synchronize the position and
-                status of the pet in the current scene to each client as the
-                minimum standard. This form is a bit like a Battle.net server.
-                The server will choose one person to be the Host, and others
-                will be P2P to connect to the player who is in charge. STUN is
-                to help players establish a P2P traction serve r, and because
-                P2P connectivity is only about 75%, players who are unconnected
-                will forward it through Forward. [Figure 1] A weak interaction
-                HTTP server should also be sufficient. [Figure 2] It only needs
-                a browser to make debugging clear.
-              </p>
-              <div>
-                <table style="margin: auto">
-                  <tr>
-                    <td>
-                      <img
-                        class="img img-fluid mb-3"
-                        src="./assets/img/research/fg1.png"
-                      />
-                    </td>
-                    <td>
-                      <img
-                        class="img img-fluid mb-3"
-                        src="./assets/img/research/fg2.png"
-                      />
-                    </td>
-                  </tr>
-                </table>
-              </div>
-              <p class="card-text">
-                Cloud server: More and more people choose cloud servers, which
-                can provide better security and stability, and reduce the
-                difficulty of development, operation, and maintenance. Google
-                cloud may be a good start.
-              </p>
-            </div>
-          </div>
-          <hr />
-
-          <h2 class="mt-3">Review of Similar Projects</h2>
-          <div class="card mt-3 mb-3">
-            <div class="card-body">
-              <p class="card-text">
-                Pokémon Go is one of the most famous and earliest AR games, and
-                it has similarities with AR part of our project. In Pokémon Go,
-                users catch and collect Pokémon under AR mode. It encourages
-                users to go out by integrating Google Map API within, so that
-                the more places user discovered, the more Pokémon he will
-                collect, the more powerful he will be. They can train it by
-                having combat with other trainers, interacting with them or
-                feeding them to increase intimacy. Likewise, in WAPETS2.0 users
-                can interact, play and feed their WAPETs under AR mode, and
-                there will be intimacy system and social media integration. Many
-                researchers suggests that Pokémon GO reduced anxiety about
-                interacting with strangers [8], Pokémon GO increases
-                attention-concentration in adolescents and players feel more
-                happy than non-players [9], and help to build social
-                connectedness through real-world engagement [10]. We have reason
-                to hope that WAPETS2.0 can bring such a positive impact to
-                society as well.
-              </p>
-              <div class="col-xl-8 offset-xl-2">
-                <img
-                  class="img img-fluid mb-3"
-                  src="./assets/img/research/pokemon_go.jpg"
-                />
-              </div>
-              <p class="card-text">
-                For Desktop App, Desktop Goose [11] may be the latest most
-                similar project. It has a large number of interactions - nab
-                user's mouse, track mud on screen, leave user a message, deliver
-                user memes... However, we would expect our desktop pet to be
-                more serious - sit idly, and only move on drag. In addition, we
-                will have functionalities of voice control and chatbot.
-              </p>
-            </div>
-          </div>
-          <hr />
-
-          <h2 class="mt-3">References</h2>
-          <div class="card mt-3 mb-3">
-            <div class="card-body">
-              <ol>
-                <li>
-                  Technologies, U., 2022. Unity Platform. [online] Unity.
-                  Available at: https://unity.com/products/unity-platform
-                  [Accessed 20 February 2022].
-                </li>
-                <li>
-                  Innovecs Games. 2022. Unity for XR Development: Why is it the
-                  Best Choice So Far?. [online] Available at:
-                  https://www.innovecsgames.com/blog/unity-for-xr-development/
-                  [Accessed 20 February 2022].
-                </li>
-                <li>
-                  Docs.microsoft.com. 2022. C# docs. [online] Available at:
-                  https://docs.microsoft.com/en-us/dotnet/csharp/ [Accessed 20
-                  February 2022].
-                </li>
-                <li>
-                  3D Development Bootcamp & XR Courses | Circuit Stream. 2022.
-                  Ultimate AR Comparison Guide | Circuit Stream. [online]
-                  Available at:
-                  https://circuitstream.com/blog/augmented-reality-guide/
-                  [Accessed 20 February 2022].
-                </li>
-                <li>
-                  UCL Computer Science. 2022. Touchless Computing with UCL’s
-                  MotionInput v2.0 and Microsoft. [online] Available at:
-                  https://www.ucl.ac.uk/computer-science/news/2021/jul/touchless-computing-ucls-motioninput-v20-and-microsoft
-                  [Accessed 20 February 2022].
-                </li>
-                <li>
-                  Ibm.com. 2022. IBM Academic Initiative. [online] Available at:
-                  https://www.ibm.com/academic/topic/artificial-intelligence
-                  [Accessed 20 February 2022].
-                </li>
-                <li>
-                  Francesco Ricci and Lior Rokach and Bracha Shapira,
-                  Introduction to Recommender Systems Handbook, Recommender
-                  Systems Handbook, Springer, 2011, pp. 1-35
-                </li>
-                <li>
-                  Lori Kogan, Peter Hellyer, Colleen Duncan, Regina
-                  Schoenfeld-Tacher, A pilot investigation of the physical and
-                  psychological benefits of playing Pokémon GO for dog owners,
-                  Computers in Human Behavior, Volume 76, 2017, Pages 431-437,
-                  ISSN 0747-5632, https://doi.org/10.1016/j.chb.2017.07.043.
-                  (https://www.sciencedirect.com/science/article/pii/S0747563217304661)
-                </li>
-                <li>
-                  Alberto Ruiz-Ariza, Rafael Antonio Casuso, Sara
-                  Suarez-Manzano, Emilio J. Martínez-López, Effect of augmented
-                  reality game Pokémon GO on cognitive performance and emotional
-                  intelligence in adolescent young, Computers & Education,
-                  Volume 116, 2018, Pages 49-63, ISSN 0360-1315,
-                  https://doi.org/10.1016/j.compedu.2017.09.002.
-                  (https://www.sciencedirect.com/science/article/pii/S0360131517302002)
-                </li>
-                <li>
-                  Vella K, Johnson D, Cheng VWS, et al. A Sense of Belonging:
-                  Pokémon GO and Social Connectedness. Games and Culture.
-                  2019;14(6):583-603. doi:10.1177/1555412017719973
-                </li>
-                <li>
-                  Goose, D., 2022. Desktop Goose by samperson. [online] itch.io.
-                  Available at: https://samperson.itch.io/desktop-goose
-                  [Accessed 29 March 2022].
-                </li>
-              </ol>
-            </div>
-          </div>
         </div>
       </div>
 
