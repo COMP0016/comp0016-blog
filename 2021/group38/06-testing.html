@@ -205,12 +205,21 @@
                 the tests can be found under the Poco repo, but in short the
                 tests are created in Python. Each component is specified by
                 using a Poco object, instantiated by "poco = UnityPoco()". The
-                poco() method is then used to carry out the tests on each
-                component.
+                poco() object is then instantiated with the specified GUI
+                component and used to carry out the tests on each component.
                 <img
                   class="img img-fluid mb-3"
                   src="./assets/img/testing/PocoTest.png"
                 />
+                As seen above, poco() imitates the GUI component specified
+                inside and tests its various methods, such as .click() for
+                buttons. When the script is run, the Log at the bottom displays
+                whether or not the tests have passed or whether they've failed
+                for any reason. We can then use this information to get a better
+                idea of where our GUI is failing and where it is implemented
+                correctly.
+              </p>
+              <p>
                 Using Poco for testing both saved us a lot of time (as we didn't
                 have to manually come up with writing scripts but could instead
                 follow a framework) and greatly improved our testing efficiency.
@@ -219,10 +228,13 @@
               <p class="card-text">
                 After we implemented the automated testing provided by Poco, we
                 were able to ensure that the UI functioned smoothly and
-                efficiently without encountering any hiccoughs. All of our UI
-                tests passed the tests, meaning that our UI -barring any
-                exceptional bugs- functions fine and can be deployed for users
-                to interact with.
+                efficiently without encountering any hiccoughs. Although Poco
+                doesn't provide the test coverage in terms of percentage, we
+                ensured that we tested all components of our GUI and made sure
+                that all of them passed, thus obtaining (somewhat indirectly)
+                100% coverage for our GUI components. All of our UI tests
+                passed, meaning that our GUI -barring any exceptional bugs-
+                functions fine and can be deployed for users to interact with.
               </p>
             </div>
           </div>
