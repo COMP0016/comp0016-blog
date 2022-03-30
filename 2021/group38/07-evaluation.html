@@ -100,13 +100,13 @@
 
     <main class="container pt-5">
       <div class="row">
-        <div class="card mt-3 mb-3">
+        <h2 class="mt-3">MoSCoW Table</h2>
+        <div class="card mb-3">
             <div class="card-body">
-              <h3 class="card-title">MoSCoW Table</h3>
-              <hr />
               <p class="card-text">
                 Below are our MoSCoW requirements. The requirements we have met are marked with "Finished" while those that we haven't are marked with an "X".
               </p>
+              <hr>
               <table class="table table-striped">
                 <thead>
                   <tr>
@@ -297,11 +297,12 @@
               </table>
             </div>
           </div>
-        </div>
-      </div>
+
           <hr />
 
-          <h3 class="card-title">Individual Contributions</h3>
+          <h2 class="card-title">Individual Contributions</h2>
+          <div class="card mt-3 mb-3">
+            <div class="card-body">
               <hr />
               <table class="table table-striped">
                 <thead>
@@ -431,8 +432,7 @@
               </table>
             </div>
           </div>
-        </div>
-      </div>
+
           <hr />
 
           <h2 class="mt-3">Known Bugs</h2>
@@ -457,20 +457,14 @@
                 <h3 class="mt-3">Functionality</h3>
               <p class="card-text">
                 Our group has always focused on our project’s main ambition: developing interactable pets for both mobile and desktop. With that main goal in mind, we have also added multiple API files to support things such as retrieving news, retrieving TFL times and displaying a real-time clock.  
-
- 
-
-In addition to our main goal, we have also added our client’s requests such as making the pets respond to user speech commands (sort of like a chatbot), having the pets respond to user questions and have added support for users to add their own commands through an Excel csv file. This way, users can add their own commands that the pet will respond to and execute. 
+                In addition to our main goal, we have also added our client’s requests such as making the pets respond to user speech commands (sort of like a chatbot), having the pets respond to user questions and have added support for users to add their own commands through an Excel csv file. This way, users can add their own commands that the pet will respond to and execute. 
               </p>
             </div>
             <div class="card-body">
                 <h3 class="mt-3">Stability / Efficiency </h3>
               <p class="card-text">
                 Our project is quite stable: the pet responds in a predictable manner and its responses can be reproduced even when the app is closed and restarted. The same applies for the login and APIs – the requests to the web server and other websites are reproducible and stable but depend largely on the latency of the user’s internet.  
-
- 
-
-One problem with efficiency that does arise from time to time is that the pet takes some time to respond to the user’s voice commands – this is caused by the pet’s response interacting with IBM’s Watson framework. Due to this delay, it may seem as if the pet is not responding at times when it is in fact processing the user’s commands.  
+                One problem with efficiency that does arise from time to time is that the pet takes some time to respond to the user’s voice commands – this is caused by the pet’s response interacting with IBM’s Watson framework. Due to this delay, it may seem as if the pet is not responding at times when it is in fact processing the user’s commands.  
               </p>
             </div>
             <div class="card-body">
