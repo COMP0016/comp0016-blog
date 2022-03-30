@@ -105,19 +105,9 @@
           <div class="card mb-3">
             <div class="card-body">
               <p class="card-text">
-                Since our main task is to implement an AR Pet Assistant, it is
-                natural to think of Unity. Unity platform allows making
-                real-time 3D projects for Games, Engineering, Film, etc. [1],
-                and it is also one of the best tools for XR development [2]. C#,
-                backed by Microsoft [3], is the language supported by Unity for
-                developers.
+                
               </p>
-              <p class="card-text">
-                Our project can be divided into 5 main parts:
-                <span style="color: blue"
-                  >AR (Unity Engine), HCI, AI, Animation, Server</span
-                >. I’ll introduce them one by one.
-              </p>
+              
             </div>
           </div>
           <hr />
@@ -125,7 +115,99 @@
           <h2 class="mt-3">Deployment Manual</h2>
           <div class="card mt-3 mb-3">
             <div class="card-body">
-              <p class="card-text">The app can be deployed as follows.</p>
+              <h3 class="mt-3">WAPETS 2 - Mobile Installation</h3>
+              <div class="card-body">
+                <h4 class="mt-3">Android</h4>
+                <p class="card-text">
+                  To install on android, simply copy the
+                  <b>wapets2-mobile.apk</b> file onto your android device and
+                  install from within your device's file manager.
+                </p>
+              </div>
+              <div class="card-body">
+                <h4 class="mt-3">Usage</h4>
+                <p class="card-text">
+                  Start the app after installing. When prompted, sign in with
+                  your WAPETS account and you are ready to go! Click around the
+                  viewport to make your pet move around and ask it some
+                  questions!
+                </p>
+              </div>
+              <div class="card-body">
+                <h4 class="mt-3">Deployment</h4>
+                <p class="card-text">Deployment is straightforward.</p>
+                <p class="card-text">
+                  1. Make sure that the project correctly targets Android/iOS ->
+                  Open the project folder in Unity Editor, go to File->Build
+                  Settings->Android/iOS and select switch platform if your
+                  platform is not set as the target platform already.
+                </p>
+                <p class="card-text">
+                  If you are running deployment straight to your mobile device:
+                </p>
+                <ul>
+                  <li>
+                    If on android, enable USB Debugging mode and connect your
+                    device via USB
+                  </li>
+                  <li>
+                    Select your device from the "Run Device" from the Drop-Down
+                    menu
+                  </li>
+                  <li>
+                    Click on Build And Run. Unity will ask you to save the .apk
+                    package locally for later transfer to your device
+                  </li>
+                </ul>
+
+                <p class="card-text">
+                  If you are deploying locally, select Build and save your .apk
+                  to the package source of your Emulator
+                </p>
+              </div>
+            </div>
+            <div class="card-body">
+              <h3 class="mt-3">WAPETS 2 - Desktop Installation</h3>
+              <div class="card-body">
+                <h4 class="mt-3">Install</h4>
+                <p class="card-text">
+                  Download the folder install
+                  <a href="https://rasa.com/docs/rasa/installation/">rasa</a>.
+                  If you are a developer, install <a href="https://www.python.org/">Python</a> and/or
+                  <a href=https://unity3d.com/get-unity/download">Unity</a> as well.
+                </p>
+              </div>
+              <div class="card-body">
+                <h4 class="mt-3">Usage</h4>
+                <p class="card-text">
+                    Modify VoiceControl.csv file under Assets/Resources/Configs folder if you want to add/delete voice commands. For this prototype we only include "open/close" keywords.
+                </p>
+                <p class="card-text">
+                    Change the files under the Assets/Resources/Music folder if you want to add/delete songs.
+                </p>
+              </div>
+              <div class="card-body">
+                <h4 class="mt-3">Deployment</h4>
+                <p class="card-text">Deployment is straightforward.</p>
+                <p class="card-text">
+                    Issue <code>$ rasa run </code>to run chatbot server. We will be using default hook for this tutorial. In case you want to create your own custom connector please refer to <a href="https://rasa.com/docs/rasa/connectors/custom-connectors/">this page</a> to see how a custom connector can be built in Rasa. Test out your installation by running the Rasa server and opening http://localhost:5005 in any browser. You should get a reply “Hello from Rasa 1.7.0” with the last part being the version of Rasa installed.
+                </p>
+                <p class="card-text">
+                    Double click on WAPETS2.exe file under Build folder.
+                </p>
+                <p class="card-text">As a developer, you can define the voice commands you want to listen for and implement the event handlers for each command in Unity. Make sure that:</p>
+                <ul>
+                  <li>
+                    You set up an IBM Cloud account, add the Speech to Text and Text to Speech service to your account.
+                  </li>
+                  <li>
+                    In Unity's Edit>Project Settings>Player, go to the other settings tab, and find configuration. In here, set API Compatibility Level to ".NET 4.x".
+                  </li>
+                  <li>
+                    For UI settings, follow the settings in<a href="https://www.youtube.com/watch?v=RqgsGaMPZTw">this video</a> (timestamp: 7:05).
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
           <hr />
